@@ -11,6 +11,13 @@ class Chromosome:
         # can live in the init here
         pass
 
+
+    # Activity (11)
+    # Room (7)
+    # Time (6)
+    # Facilitator (10)
+    
+
 class Population:
     _population = []
 
