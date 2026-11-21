@@ -1,4 +1,3 @@
-
 import math
 
 
@@ -9,6 +8,20 @@ def binary_to_decimal(bin: str):
     # assuming we chop off the base from the string literal
     return int(bin, 2)
 
+def encode_features(feature_map):
+
+    # Room (7) (technically 9 with room numbers)
+    # Time (6)
+    # Facilitator (10)
+    
+    for category in feature_map:
+        num_bits = math.ceil(math.log2(len(category)))
+
+        for x in category:
+            # Convert the feature x into binary and append it to a list
+            pass
+
+    pass
 class Chromosome:
     # we can use a couple different representations for features here,
     # real-valued is probably better but we can also use binary encoding
@@ -73,22 +86,6 @@ class Population:
         # update this to print the population
         # in a way that makes sense given the context
         print(self._population)
-
-def encode_features(feature_map):
-
-    # Room (7) (technically 9 with room numbers)
-    # Time (6)
-    # Facilitator (10)
-    
-    for category in feature_map:
-        num_bits = math.ceil(math.log2(len(category)))
-
-        for x in category:
-            # Convert the feature x into binary and append it to a list
-            pass
-
-    pass
-
 
 
 def main():
